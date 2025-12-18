@@ -21,3 +21,16 @@
 | 19   | `docker rmi myimage-2:latest`                                  | Remove a Docker image from the host.                                                      |
 | 20   | `cat docker-compose.yml`                                       | View Docker Compose configuration file.                                                   |
 | 21   | `docker run --network host -d nginx nginx -g "listen 809;"`    | Attempt to start Nginx on port 809 via `-g` (invalid, must be in server block).           |
+
+
+Git Commands Worked
+
+| Step | Command                                                                    | Brief Explanation                                                              |
+| ---- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 1    | `git init`                                                                 | Initialize a new Git repository in the current directory.                      |
+| 2    | `git remote add origin https://github.com/logesh-235/Docker-Learnings.git` | Link your local repository to a remote GitHub repository.                      |
+| 3    | `git add .`                                                                | Stage all files in the current directory for the next commit.                  |
+| 4    | `git status`                                                               | Show the current status of the repository (staged, modified, untracked files). |
+| 5    | `git commit -m "Initial Commit - 18-12-2025"`                              | Commit staged files with a descriptive message.                                |
+| 6    | `git push -u origin master`                                                | Push your local commits to the remote repository and set upstream branch.      |
+
