@@ -1,0 +1,52 @@
+services:
+  mycontainer-1:
+    image : myimage:latest
+    ports :
+      - "80:80"
+    network_mode : host
+    volumes :
+      - myvolume:/app
+    depends_on :
+      - mycontainer-2
+
+  mycontainer-2:
+    image : myimage:latest
+    ports :
+      - "80:80"
+    network_mode : host
+    volumes :
+      - myvolume:/app
+    depends_on :
+        - mycontainer-3
+
+  mycontainer-3:
+    image : myimage:latest
+    ports :
+      - "80:80"
+    network_mode : host
+    volumes :
+      - myvolume:/app
+    depends_on :
+      - mycontainer-4
+
+  mycontainer-4:
+    image : myimage:latest
+    ports :
+      - "80:80"
+    network_mode : host
+    volumes :
+      - myvolume:/app
+    depends_on :
+        - mycontainer-5
+
+  mycontainer-5:
+    image : myimage:latest
+    ports :
+      - "80:80"
+    network_mode : host
+    volumes :
+      - myvolume:/app
+    #depends_on :- mycontainer-1
+
+volumes:
+  myvolume :

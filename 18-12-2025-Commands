@@ -1,0 +1,23 @@
+| Step | Command                                                        | Brief Explanation                                                                         |
+| ---- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| 1    | `cd Docker/`                                                   | Navigate into the Docker project folder.                                                  |
+| 2    | `ls`                                                           | List files and directories.                                                               |
+| 3    | `nano Dockerfile` / `nano docker-compose.yml` / `nano main.py` | Edit project files or Dockerfiles.                                                        |
+| 4    | `docker build -f Dockerfile -t myimage .`                      | Build a Docker image named `myimage` using the specified Dockerfile.                      |
+| 5    | `docker images`                                                | List all Docker images on the host.                                                       |
+| 6    | `docker compose build`                                         | Build images defined in `docker-compose.yml`.                                             |
+| 7    | `docker compose up -d`                                         | Start containers in detached mode using Docker Compose.                                   |
+| 8    | `docker compose up -d --build`                                 | Build images and start containers in detached mode (rebuilds if Dockerfile changed).      |
+| 9    | `docker run --name mycontainer -d myimage:latest`              | Run a container in detached mode from `myimage:latest` with a specified name.             |
+| 10   | `docker run -d -p 8080:80 nginx`                               | Run Nginx container in detached mode, mapping host port 8080 to container port 80.        |
+| 11   | `docker run --network host -d nginx`                           | Run Nginx container using host network mode (shares host network stack, no port mapping). |
+| 12   | `docker run -d -p 8080:81 nginx`                               | Map host port 8080 to container port 81, useful for running multiple Nginx instances.     |
+| 13   | `docker logs mycontainer`                                      | View logs of a running container.                                                         |
+| 14   | `docker ps`                                                    | List currently running containers.                                                        |
+| 15   | `docker ps -a`                                                 | List all containers, including stopped ones.                                              |
+| 16   | `docker rm mycontainer`                                        | Remove a stopped container from Docker.                                                   |
+| 17   | `docker network create --driver host mynetwork`                | Create a Docker network using host driver (containers share host network).                |
+| 18   | `docker network ls`                                            | List Docker networks.                                                                     |
+| 19   | `docker rmi myimage-2:latest`                                  | Remove a Docker image from the host.                                                      |
+| 20   | `cat docker-compose.yml`                                       | View Docker Compose configuration file.                                                   |
+| 21   | `docker run --network host -d nginx nginx -g "listen 809;"`    | Attempt to start Nginx on port 809 via `-g` (invalid, must be in server block).           |
